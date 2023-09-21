@@ -6,4 +6,12 @@ The `canvasLayer.zip` file is checked into version control, but version changes 
 
 ## Terraform
 
-This repo contains a sample terraform file meant to add the lambda layer to an AWS account.
+The `terraform` directory can be used as a terraform module from this git repository. The source should look something like this:
+
+```
+source: github.com/Harvard-ATG/canvas-access-lambda-layer//terraform
+```
+
+The `//` denotes the break between the address of the repository and the path to the terraform module within the repository. See the [Terraform documentation on sources](https://developer.hashicorp.com/terraform/language/modules/sources) for a full description of options in referencing module sources from a git repository.
+
+In my experience, you can safely include this module in multiple terraform configurations in the same account, and it will just add additional revisions as long as the layer name is the same.
