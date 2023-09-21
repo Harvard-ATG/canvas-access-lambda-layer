@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 data "local_file" "lambda_layer" {
-  filename = "./canvasLayer.zip"
+  filename = "${path.module}/canvasLayer.zip"
 }
 
 resource "aws_lambda_layer_version" "canvas" {
