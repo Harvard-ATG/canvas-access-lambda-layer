@@ -2,4 +2,4 @@
 pip install -r requirements.txt -t ./python
 
 # Zip dependencies into a file for use as a lambda layer
-zip -r canvasLayer.zip ./python/
+zip -r terraform/canvasLayer.zip ./python/
